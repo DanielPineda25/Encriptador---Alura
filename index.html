@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Encriptador de texto | Alura Challenge</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="contenedor-logo">
+            
+            <a onclick="reloadPage()" style="cursor: pointer;"><h1><img class="logo" src="recursos/vector.png" alt="logo de alura" /></h1></a>
+
+        </div>       
+
+    </header>
+
+    <main>
+
+        <section id="ingresarTexto" class="seccion-ingresar">
+
+            <div class="ingresar-texto">
+
+                <textarea class="text-ingresar" id="ingreseTexto" cols="30" rows="10" placeholder="Ingrese el texto aquí" onkeyup="detectarMinuscula()"></textarea>
+
+            </div>
+
+            <div class="contenedor-terminos">
+
+                <p class="mensaje-error" id="mensajeError" style="color: red; display: none;">¡Solo puedes ingresar minúsculas y sin caracteres especiales!</p>
+                <img class="logo-alerta" src="recursos/alerta.png" alt="logo alerta" />
+                <h6 class="texto-informacion">Solo letras minúsculas y sin acentos.</h6>
+
+            </div>
+
+            <div class="caja-botones">
+
+                <button id="botonEncriptar" class="boton-encriptar">Encriptar</button>
+                <button id="botonDesencriptar" class="boton-desencriptar">Desencriptar</button>
+
+            </div>
+
+        </section>
+
+        <section id="seccion-principal" class="seccion-mostrar">
+            
+            <div class="contenedor-pantalla">
+
+                <textarea id="parrafo-cambiante" class="mostrar-mensaje" cols="20" rows="10" disabled></textarea> 
+
+                <div id="div-muneico" class="imagen-munieco">
+
+                    <img id="imagen-munieco" src="recursos/muñeco.png" alt="personaje observando diamante con una lupa" />
+                    <h2 id="titulo-mensaje">Ningún mensaje fue <br/>encontrado</h2>
+                    <br/>
+                    <p id="parrafo">Ingresa el texto que deseas encriptar o <br/>desencriptar.</p>
+
+                </div> 
+
+            </div>
+                   
+            <div class="div-copiar">
+
+                <button id="botonCopiar" class="boton-copiar" onclick="copiarTexto()" style="cursor: pointer; visibility: hidden;">Copiar texto</button>
+                
+            </div> 
+            
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <section class="div-redes">
+
+            <a class="link-redes" href="https://www.instagram.com/danieldinedasi/"><img class="logo-instagram" src="recursos/icono instagram.png" alt="logo instagram" /></a>
+
+            <a class="link-redes" href="https://www.youtube.com/mundosipossible"><img class="logo-youtube" src="recursos/icono youtube.png" alt="logo youtube" /></a>
+
+            <a class="link-redes" href="https://www.linkedin.com/in/danielpinedasi"><img class="logo-linkedin" src="recursos/icono linkedin.png" alt="logo linkedin" /></a>
+
+            <a class="link-redes" href="https://github.com/DanielPineda25?tab=projects"><img class="logo-github" src="recursos/icono github.png" alt="logo github" /></a>
+
+        </section>
+
+        <section class="copyright">
+
+            <h2>© 2023 Copyright | Daniel Pineda</h2>
+
+        </section>
+
+    </footer>
+
+    <script src="encriptador.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
